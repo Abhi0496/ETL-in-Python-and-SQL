@@ -34,3 +34,40 @@ This repo contains code and notes I took from the course- ETL in Python and SQL 
         * Data Filtering- Remove unwanted data from entire dataset.
         * Data Cleaning- We identify and eliminate errors and inconsistencies in the data
 
+## Chapter 3) Loading data into target system
+    Data Warehouse, Data Base, Data Lakes are various ways organization manage and store their data
+
+    Database- 
+        * Organized collection of data that are controlled using database management system(DBMS)
+        * DBMS is a software that allows you to access , interact and manipulate data in database
+        * Database focus on operational and transactional data and managing day to day CRUD (Create, Read, Update, Delete)operation
+        * MySQL, Postgres are relational database
+        * Database can be structured, un-structures or semi structured
+            Structured- Uses table to store data where each table has pre-defined schema with columns and data types
+            Semi-Structured- Does not fit into the table but have some organization. Ex- XML, JSON can be stored into MongoDB
+            Un Structured- Does not have schema and are not organized into tabular form. These can be stored in an object oriented db
+    
+    Datawarehouse- 
+        * Centralized systems or repositories that store data from various sources
+        * Ex- transactional database system, API's, ERM System, and CRM Systems
+        * It provides support to Business intelligence and provides a single and structured view in consistent format
+        * It tracks historical information
+    
+    Data Lakes-
+        * Its a flexible and scalable data storage system storing both structured and unstructured data
+        * It doesn't really require pre-defined schema or structure. It is usually stored in flat file architecture
+        * Easier for end user to access raw data
+        * Ex- Apache Hive
+    
+    Sumary-
+        * Database provide transactional efficiency
+        * Data Warehouse are optimized for complex analytical queries that involves aggregation, grouping and reporting from various sources. It supports historical data from various sources and business Intelligence tools
+        * Data Lake provide flexibility and Scalability in data Storage. It provides balance between raw storage and Structured querying
+    
+    SQLAlchemy- Its a SQL Toolkit library for python which allows you to connect and interact with relational databases like Postgres
+
+    As the data moves in data pipeline it is important to ensure data quality, completness, and correctness. This can be done is various ways
+        Check number of rows*columns in source as well as columns  
+    
+    Data Accuracy Checks- Completeness, Uniqueness, Consistency, Current
+    Data Integrity Checks- Duplicates detection, Freshness, Timeliness 
