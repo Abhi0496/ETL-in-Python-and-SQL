@@ -71,3 +71,22 @@ This repo contains code and notes I took from the course- ETL in Python and SQL 
     
     Data Accuracy Checks- Completeness, Uniqueness, Consistency, Current
     Data Integrity Checks- Duplicates detection, Freshness, Timeliness 
+
+## Chapter 4) Automating ETL Jobs: Scheduling ETL Jobs with Python
+    In elephantSql running below queries to fetch data from the db
+
+    SELECT count(*) FROM "public"."customers" WHERE "State" = 'TX' and "City" = 'Dallas'- To see customer from Texas state and Dallas City
+
+    SELECT "State", "City", COUNT("CustomerID") AS CustomerCount
+    FROM Customers
+    GROUP BY "State", "City"
+    ORDER BY CustomerCount DESC
+    - To see all the customer count in a particular state city 
+
+    ETL Automation- It uses technology to run ETL processes and workflows between tools and systems without manual intervention based on schedules or events. This ensures that organization are always working with upto date datasets. Tools- Apache Airflow, Oozie, Nifi, Luigi, Microsoft Azure Data Factory, SSIS
+
+    Apache Airflow is an open source platform designed to schedule and monitor workflows defined as directed acyclic graphs(DAGs). Each nodes represents a task to be executed
+
+    Scheduling ETL jobs with Airflow
+
+    Dags are python file so we cannot save jupyter notebook in them, we have to save .py file
